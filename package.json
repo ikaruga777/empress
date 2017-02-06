@@ -1,0 +1,15 @@
+{
+  "name": "empress",
+  "version": "1.0.0",
+  "description": "「家の扉開けたら、エンプレスマーチが流れるようにならないかな」",
+  "main": "index.js",
+  "dependencies": {
+    "rpi-gpio": "^0.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ikaruga",
+  "license": "MIT"
+}
