@@ -2,7 +2,7 @@
   "name": "empress",
   "version": "1.0.0",
   "description": "「家の扉開けたら、エンプレスマーチが流れるようにならないかな」",
-  "main": "index.js",
+  "main": "empress.js",
   "dependencies": {
     "rpi-gpio": "^0.7.0",
     "rpio": "^0.9.15",
@@ -10,6 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node empress.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ikaruga",
