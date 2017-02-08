@@ -1,0 +1,35 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:           jetty
+# Required-Start:
+# Required-Stop:
+# Default-Start:      2 3 4 5
+# Default-Stop:       0 1 6
+# Short-Description:
+# Description:
+### END INIT INFO
+cd /home/pi/empress/
+start(){
+	sudo -u pi /usr/local/bin/forever start --workingDir=/home/pi/empress -a --uid empress /home/pi/empress/empress.js
+	return 0
+}
+stop(){
+	/usr/local/bin/forever stop empress
+}
+case "$1" in 
+	start)
+	  stop
+	  start 
+	  ;;
+	restart)
+	  stop
+	  start 
+	  ;;
+	stop)
+	  stop
+	;;
+	*)
+	echo $"Usage: $0 {start|stop|restart}"
+	exit 2
+esac

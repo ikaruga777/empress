@@ -10,10 +10,10 @@ function pollcb(pin){
 		console.log('close');
 	}else{
 		if(process){process.kill();}
-		process= player('1emp.mp3',function(){
+		process= player(__dirname+'/1emp.mp3',function(){
 				console.log("end");
 			});
-		console.log('open');
+		console.log(__dirname,'open');
 	}
 	}catch(e){
 		console.log("kill");
